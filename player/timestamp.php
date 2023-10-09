@@ -54,9 +54,20 @@ function playNew($conn) {
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-      //sets timestamp & playing on new song in db
-      $sql = "UPDATE music SET last_played = CURRENT_TIMESTAMP, playing = 1 WHERE id=".$row["id"];
-      $conn->query($sql);
+		  $playedTimestamp = strtotime($row["last_played"]);
+      $timeSincePlay = time() - $playedTimestamp;
+      //playing coolding in seconds
+      $cooldown = 3600;
+      //if timestamp from db UPDATED since cooldown
+      if ($timeSincePlay > $cooldown) {
+        //sets timestamp & playing on new song in db
+        $sql = "UPDATE music SET last_played = CURRENT_TIMESTAMP, playing = 1 WHERE id=".$row["id"];
+        $conn->query($sql);
+
+        //music is still on cooldown
+      } else {
+        playNew($conn);
+      }
     }
   }
 }
