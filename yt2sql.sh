@@ -18,8 +18,8 @@ while IFS= read -r youtube_link; do
     producer=$(yt-dlp --print uploader "$youtube_link")
 
     #Makes clean versions, to work with sql
-    title_cleaned=$(echo "$title" | sed "s/'//g")
-    producer_cleaned=$(echo "$producer" | sed "s/'//g")
+    title_cleaned=$(echo "$title" | sed -e "s/\// /g" -e "s/'//g")
+    producer_cleaned=$(echo "$producer" | sed -e "s/\// /g" -e "s/'//g")
 
     # Download audio
     yt-dlp --extract-audio --audio-format opus -o "$music_dir/$title_cleaned-$producer_cleaned.opus" "$youtube_link"
