@@ -9,7 +9,6 @@ Music will be downloaded using yt-dlp to /music, sql commands in sql.txt.
 see pilk-radio.sql/sql.txt for database example.
 
 ## Known issues
-- The same music can be played multiple times in a row, but chances are low with more music.
 - On some android devices (oneplus?) battery optimization will have to be
   turned off for the browser app. Otherwise autoplay won't work when the phone is sleeping.
 

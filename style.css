@@ -4,10 +4,13 @@
 	font-family: 'Roboto', sans-serif;
 }
 
-h1,h2,p,a,marquee {
+h1,h2,p,a,marquee,li,summary {
 	color: #fdd384;
   text-align: center;
 }                                                                                                                                                                             
+ul {
+  list-style: none;
+}
 
 a:hover {
 	color: #fdd384;
@@ -36,10 +39,14 @@ body {
 
 .marquee-container {
   overflow: hidden;
+  overflow-x: hidden;
+  max-width: 95vw;
 }
 .marquee-text {
+  max-width: 95vw;
   white-space: nowrap; /* Prevent text from wrapping */
   animation: marquee 10s linear infinite; /* Adjust the duration and timing function as needed */
+  overflow-x: hidden;
 }
 
 @keyframes marquee {

@@ -16,5 +16,13 @@
     <img id="necoarc" src="start.png">
     <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1" onchange="updateVolume()">
     <p><a href="mailto:pilk@necoarc.org">pilk@necoarc.org</a></p>
+    <details>
+      <summary style="margin-top: 0.5em;">1.1 Changelog</summary>
+      <ul>
+        <li>- Added 100+ more covers</li>
+        <li>- Added music cooldown of 1 hour</li>
+      </ul>
+      <p><a href="https://github.com/norrlandxyz/pilk-radio/">Github</a></p>
+    </details>
 </body>
 </html>
