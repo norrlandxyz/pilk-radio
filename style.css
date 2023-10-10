@@ -1,4 +1,5 @@
 * {
+  overflow: hidden;
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto', sans-serif;
@@ -39,14 +40,11 @@ body {
 
 .marquee-container {
   overflow: hidden;
-  overflow-x: hidden;
-  max-width: 95vw;
 }
 .marquee-text {
-  max-width: 95vw;
   white-space: nowrap; /* Prevent text from wrapping */
   animation: marquee 10s linear infinite; /* Adjust the duration and timing function as needed */
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 @keyframes marquee {
