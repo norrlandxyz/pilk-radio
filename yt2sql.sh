@@ -35,5 +35,7 @@ while IFS= read -r youtube_link; do
 
 done < "$input_file"
 
+echo "UPDATE music SET last_played = CURDATE() - INTERVAL 1 DAY;" >> "$sql_file"
+
 echo "SQL commands have been written to $sql_file"
 

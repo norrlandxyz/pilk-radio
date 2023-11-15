@@ -57,7 +57,7 @@ function playNew($conn) {
 		  $playedTimestamp = strtotime($row["last_played"]);
       $timeSincePlay = time() - $playedTimestamp;
       //playing coolding in seconds
-      $cooldown = 3600;
+      $cooldown = 36000;
       //if timestamp from db UPDATED since cooldown
       if ($timeSincePlay > $cooldown) {
         //sets timestamp & playing on new song in db
