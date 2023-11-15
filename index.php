@@ -14,7 +14,7 @@
       <p class="marquee-text" id="prod"></p>
     </div>
     <img id="necoarc" src="start.png">
-    <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1" onchange="updateVolume()">
+    <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
     <p><a href="mailto:pilk@necoarc.org">pilk@necoarc.org</a></p>
     <details>
       <summary style="margin-top: 0.5em;">1.1 Changelog</summary>

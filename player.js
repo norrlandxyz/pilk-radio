@@ -52,10 +52,13 @@ function playButton () {
 }
 
 function updateVolume() {
+    console.log('Volume updated!');
     audioPlayer = document.getElementById("audioPlayer");
-    const volumeSlider = document.getElementById("volumeSlider");
+    //const volumeSlider = document.getElementById("volumeSlider");
     audioPlayer.volume = volumeSlider.value;
 }
+const volumeSlider = document.getElementById('volumeSlider');
+volumeSlider.addEventListener('input', updateVolume);
 
 const necoarc = document.getElementById('necoarc');
 necoarc.addEventListener('click', playButton);
