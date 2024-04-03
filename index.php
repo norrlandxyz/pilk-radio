@@ -17,10 +17,9 @@
     <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
     <p><a href="mailto:pilk@necoarc.org">pilk@necoarc.org</a></p>
     <details>
-      <summary style="margin-top: 0.5em;">1.1 Changelog</summary>
+      <summary style="margin-top: 0.5em;">Changelog</summary>
       <ul>
-        <li>- Added 100+ more covers</li>
-        <li>- Added music cooldown of 1 hour</li>
+        <li>- Added 60+ covers (thanks Alexander!)</li>
       </ul>
       <p><a href="https://github.com/norrlandxyz/pilk-radio/">Github</a></p>
     </details>
